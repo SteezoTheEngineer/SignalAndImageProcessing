@@ -23,7 +23,7 @@ def compute_distances(img):
     greenPixel = find_pixels(img, [0,255,0])
     redPixels = find_pixels(img, [255, 0, 0])
     diff = greenPixel-redPixels
-    dist = np.sqrt(np.square(diff))
+    dist = np.sqrt(np.square(diff[:,0])+np.square(diff[:,1]))
     return dist
 
 # Display the computed distance vector dist in a histogram (with 100 bins), compute
@@ -35,7 +35,8 @@ def visualize_results(dist):
     plt.show()
 
 img = create_image(100,100)
-find_pixels(img, [0,255,0])
+plt.imshow(img)
+plt.show()
 dist = compute_distances(img)
 visualize_results(dist)
 
