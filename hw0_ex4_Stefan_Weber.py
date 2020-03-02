@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define two arrays x, y of length 100, and assign random values to them
-x = np.around(np.random.rand(3)*10, decimals=1)
-y = np.around(np.random.rand(3)*10, decimals=1)
+x = np.around(np.random.rand(100)*10, decimals=1)
+y = np.around(np.random.rand(100)*10, decimals=1)
 
 # Write a function rmse(a,b) that calculates the RMSE (root mean square error) between two 1-d arrays of size N.
 def RMSE(a, b):
