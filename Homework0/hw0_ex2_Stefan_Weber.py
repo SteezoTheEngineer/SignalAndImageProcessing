@@ -34,7 +34,7 @@ def visualize_results(dist):
     plt.title('distance mean=%f, std=%f, median=%f' %(np.median(dist), np.std(dist), np.mean(dist)))
     plt.show()
 
-img = create_image(100,100)
+img = create_image(100,50)
 plt.imshow(img)
 plt.show()
 dist = compute_distances(img)
